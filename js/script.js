@@ -34,14 +34,14 @@ role : "Chief Editor ",
 photo : "angela-caroll-chief-editor.jpg",
 },
   
-{ name : "Walter Gordon ",
+{ name : "Walter Gordon",
 role : "Office Manager",
 photo : "walter-gordon-office-manager.jpg",
 },
 
 { name : "Angela Lopez",
-role : "Social Media",
-photo : "Manager  angela-lopez-social-media-manager.jpg",
+role : "Social Media Manager",
+photo : "angela-lopez-social-media-manager.jpg",
 },
 
 { name : "Scott Estrada",
@@ -56,6 +56,15 @@ photo : "barbara-ramos-graphic-designer.jpg",
 
   ];
 
-  for (let info in team) {
-    console.log(info, "->", team[info])
-  }
+  let dati;
+  let infoBox = document.getElementById("info-box");
+
+
+  
+    for (let info in team) {
+    console.log(team[info]);
+
+      const newP = document.createElement('p');
+      newP.innerHTML= team[info].name + " | " + team[info].role + " | " + team[info].photo;
+      infoBox.appendChild(newP);
+    };
