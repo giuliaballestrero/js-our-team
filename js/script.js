@@ -65,17 +65,22 @@ photo : "./img/barbara-ramos-graphic-designer.jpg",
     console.log(team[info]);
 
       const card = document.createElement('div');
+      card.classList.add('my-card');
       infoBox.appendChild(card);
 
-      const firstP = document.createElement('p');
-      firstP.innerHTML= team[info].name;
-      card.appendChild(firstP);
+      const myH2 = document.createElement('h2');
+      myH2.innerHTML= team[info].name;
+      myH2.classList.add('my-h2');
+      card.appendChild(myH2);
 
-      const secondP = document.createElement('p');
-      secondP.innerHTML= team[info].role;
-      card.appendChild(secondP);
+      const myH3 = document.createElement('h3');
+      myH3.innerHTML= team[info].role;
+      myH3.classList.add('my-h3');
+      card.appendChild(myH3);
 
       const myImg = document.createElement('figure');
+      myImg.classList.add('my-img');
       myImg .innerHTML= "<img src=" + team[info].photo + ">"
-      card.appendChild(myImg );
+      card.appendChild(myImg) ;
+
     };
