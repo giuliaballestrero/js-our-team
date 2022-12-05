@@ -79,8 +79,7 @@ photo : "barbara-ramos-graphic-designer.jpg",
       card.appendChild(myH3);
 
       const myImg = document.createElement('figure');
-      myImg.classList.add('my-img');
-      myImg .innerHTML= "<img src=" + "./img/" + team[info].photo + ">"
+      myImg .innerHTML= "<img src=" + "./img/" + team[info].photo + ">";
       card.appendChild(myImg);
 
     };
