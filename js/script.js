@@ -26,32 +26,32 @@ Buon lavoro!
   const team = [
 { name : "Wayne Barnett",
 role : "Founder & CEO",
-photo : "wayne-barnett-founder-ceo.jpg",
+photo : "./img/wayne-barnett-founder-ceo.jpg",
 },
 
 { name : "Angela Caroll",
 role : "Chief Editor ",
-photo : "angela-caroll-chief-editor.jpg",
+photo : "./img/angela-caroll-chief-editor.jpg",
 },
   
 { name : "Walter Gordon",
 role : "Office Manager",
-photo : "walter-gordon-office-manager.jpg",
+photo : "./img/walter-gordon-office-manager.jpg",
 },
 
 { name : "Angela Lopez",
 role : "Social Media Manager",
-photo : "angela-lopez-social-media-manager.jpg",
+photo : "./img/angela-lopez-social-media-manager.jpg",
 },
 
 { name : "Scott Estrada",
 role : "Developer",
-photo : "scott-estrada-developer.jpg",
+photo : "./img/scott-estrada-developer.jpg",
 },
 
 { name : "Barbara Ramos",
 role : "Graphic Designer",
-photo : "barbara-ramos-graphic-designer.jpg",
+photo : "./img/barbara-ramos-graphic-designer.jpg",
 },
 
   ];
@@ -64,7 +64,18 @@ photo : "barbara-ramos-graphic-designer.jpg",
     for (let info in team) {
     console.log(team[info]);
 
-      const newP = document.createElement('p');
-      newP.innerHTML= team[info].name + " | " + team[info].role + " | " + team[info].photo;
-      infoBox.appendChild(newP);
+      const card = document.createElement('div');
+      infoBox.appendChild(card);
+
+      const firstP = document.createElement('p');
+      firstP.innerHTML= team[info].name;
+      card.appendChild(firstP);
+
+      const secondP = document.createElement('p');
+      secondP.innerHTML= team[info].role;
+      card.appendChild(secondP);
+
+      const myImg = document.createElement('figure');
+      myImg .innerHTML= "<img src=" + team[info].photo + ">"
+      card.appendChild(myImg );
     };
